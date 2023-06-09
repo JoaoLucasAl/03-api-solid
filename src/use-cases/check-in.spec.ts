@@ -6,8 +6,6 @@ import { Decimal } from "@prisma/client/runtime/library";
 import { MaxNumberOfCheckInsError } from "./errors/max-number-of-check-ins-error";
 import { MaxDistanceError } from "./errors/max-distance-error";
 
-
-
 let checkInsRepository: InMemoryCheckInsRepository;
 let gymsRepository: InMemoryGymsRepository;
 let sut: CheckInUseCase;
@@ -55,7 +53,6 @@ describe("Check-in Use Case", () => {
 			userLatitude: 0,
 			userLongitude: 0
 		});
-		
 
 		expect(async () =>  await sut.execute({
 			gymId: "gym-id",

@@ -4,7 +4,6 @@ import { compare } from "bcryptjs";
 import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users-repository";
 import { UserAlreadyExistsError } from "./errors/user-already-exits-error";
 
-
 let userRepository: InMemoryUsersRepository;
 let sut: RegisterUseCase;
 
@@ -24,7 +23,6 @@ describe("Register Use Case", () => {
 
 		expect(user.id).toEqual(expect.any(String));
 	});
-
 
 	it("should hash a user password upon registration", async () => {
 
@@ -56,7 +54,6 @@ describe("Register Use Case", () => {
 				password: "123456"
 			})
 		).rejects.toBeInstanceOf(UserAlreadyExistsError);
-
 
 	});
 });

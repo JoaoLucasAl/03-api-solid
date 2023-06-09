@@ -1,13 +1,11 @@
 import { it, expect, describe, beforeEach } from "vitest";
-import { compare, hash } from "bcryptjs";
+import { hash } from "bcryptjs";
 import { InMemoryUsersRepository } from "@/repositories/in-memory/in-memory-users-repository";
 import { AuthenticateUseCase } from "./authenticate";
 import { InvalidCredentialsError } from "./errors/invalid-credentials-error";
 
 let userRepository: InMemoryUsersRepository;
 let sut: AuthenticateUseCase;
-
-
 
 describe("Authenticate Use Case", () => {
 	beforeEach(() => {
@@ -48,7 +46,6 @@ describe("Authenticate Use Case", () => {
 			email: "johndoe@example.com",
 			password_hash: await hash("123456", 6)
 		});
-
 
 		expect(() => sut.execute({
 			email: "johndoe@example.com",

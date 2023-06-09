@@ -7,8 +7,6 @@ import { ResourceNotFoundError } from "./errors/resource-not-found";
 let userRepository: InMemoryUsersRepository;
 let sut: GetUserProfileUseCase;
 
-
-
 describe("Get User Profile Use Case", () => {
 
 	beforeEach(() => {
@@ -31,7 +29,6 @@ describe("Get User Profile Use Case", () => {
 		expect(user.id).toEqual(expect.any(String));
 		expect(user.name).toEqual("John Doe");
 
-
 	});
 
 	it("should not be able to get user profile with the wrong id", async () => {
@@ -41,6 +38,5 @@ describe("Get User Profile Use Case", () => {
 		})).rejects.toBeInstanceOf(ResourceNotFoundError);
 
 	});
-
 
 });

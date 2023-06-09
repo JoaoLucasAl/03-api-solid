@@ -3,4 +3,3 @@ export class InvalidCredentialsError extends Error {
       super("Invalid credentials.");
     }
   }
-  

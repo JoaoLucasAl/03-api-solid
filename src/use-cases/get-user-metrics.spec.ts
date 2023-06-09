@@ -2,8 +2,6 @@ import { it, expect, describe, beforeEach } from "vitest";
 import { InMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-ins-repository";
 import { GetUserMetricsUseCase } from "./get-user-metrics";
 
-
-
 let checkInsRepository: InMemoryCheckInsRepository;
 let sut: GetUserMetricsUseCase;
 

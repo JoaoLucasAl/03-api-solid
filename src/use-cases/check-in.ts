@@ -52,7 +52,6 @@ export class CheckInUseCase {
 			user_id: userId
 		});
 
-
 		return {
 			checkIn
 		};
