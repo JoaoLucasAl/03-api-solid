@@ -1,6 +1,15 @@
 # App
 
 GymPass style app.
+Para rodar o projeto, é necessário ter o [Docker](https://www.docker.com/) instalado.
+Rode os seguintes comandos:
+
+```
+npm i
+docker compose up
+npx prisma migrate dev
+npm run dev
+```
 
 ## RFs (Requisitos Funcionais)
 
