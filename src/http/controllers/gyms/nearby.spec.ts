@@ -3,7 +3,7 @@ import { app } from '@/app';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { createAndAuthUser } from '@/util/test/create-and-auth-user';
 
-describe('Search Gyms (e2e)', () => {
+describe('Nearby Gyms (e2e)', () => {
 
     beforeAll(async () => {
         await app.ready()
@@ -15,7 +15,7 @@ describe('Search Gyms (e2e)', () => {
 
     it('should be able to list nearby gyms', async () => {
 
-        const { token } = await createAndAuthUser(app)
+        const { token } = await createAndAuthUser(app, true)
 
         await request(app.server)
             .post('/gyms')
